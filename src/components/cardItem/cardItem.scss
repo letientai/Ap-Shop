@@ -1,0 +1,47 @@
+.cardItem-container {
+    width: 170px;
+    height: 320px;
+    margin: 10px;
+    border: 1px solid rgb(202, 202, 202);
+    .image {
+      width: 100%;
+      height: 230px;
+      overflow: hidden;
+      img {
+        width: 100%;
+        height: 230px;
+      }
+    }
+    h5 {
+      margin: 0;
+      padding-left: 10px;
+      height: 35px;
+    }
+    .start {
+      padding-left: 10px;
+      font-size: 18px;
+    }
+    .price {
+      padding-left: 10px;
+      color: red;
+      display: flex;
+      .deal {
+        margin-left: 10px;
+        border: 1px solid red;
+        height: 20px;
+        border-radius: 5px;
+        p {
+          padding: 0.5px;
+          font-size: 13px;
+        }
+      }
+    }
+    &:hover {
+      img {
+        transform: scale(1.1);
+        overflow: hidden;
+        transition: 0.5s ease;
+      }
+    }
+  }
+  

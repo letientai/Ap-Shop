@@ -1,0 +1,190 @@
+.home-container1 {
+  position: relative;
+  margin-top: 0;
+  text-align: left;
+}
+.home-container2 {
+  position: relative;
+  margin-top: 0;
+  background-color: rgb(37, 37, 37);
+  color: white;
+  text-align: left;
+}
+.dimmer {
+  position: fixed !important;
+}
+.home-top {
+  .content-Top {
+    padding-top: 80px;
+    height: 500px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: top;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    display: block;
+    background-image: url("https://wallpaperaccess.com/full/279643.jpg");
+    .content {
+      position: absolute;
+      width: 100%;
+      .btn-category {
+        color: rgb(255, 255, 255);
+        height: 35px;
+        border: 1px solid white;
+        width: 100px;
+        font-size: 15px;
+        margin: 50px;
+        float: right;
+        display: flex;
+        cursor: pointer;
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.12);
+        }
+        p {
+          margin: 0;
+          padding: 5px;
+        }
+        .icon-angle-down {
+          padding: 7px;
+          font-size: 17px;
+        }
+      }
+      .category {
+        float: right;
+        margin-top: 50px;
+        // width: 55%;
+        background-color: rgba(0, 0, 0, 0.42);
+        display: none;
+        color: rgb(255, 255, 255);
+        transform: translateX(30px);
+        text-shadow: 0px 0.3px 0.8px rgba(0, 0, 0, 0.049),
+          0.1px 0.6px 1.9px rgba(0, 0, 0, 0.071),
+          0.2px 1.2px 3.5px rgba(0, 0, 0, 0.087),
+          0.3px 1.9px 5.8px rgba(0, 0, 0, 0.103),
+          0.5px 3.2px 9.5px rgba(0, 0, 0, 0.119),
+          0.9px 5.5px 16.6px rgba(0, 0, 0, 0.141),
+          2px 12px 36px rgba(0, 0, 0, 0.19);
+        ul {
+          margin: 15px;
+          li {
+            margin: 10px;
+            cursor: pointer;
+            &:hover {
+              border-bottom: 1px solid white;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.main {
+  width: 90%;
+  margin: auto;
+  max-width: 1350px;
+  .main-content {
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    .menu-right {
+      width: 23%;
+      border: 1px solid rgb(230, 230, 229);
+      box-shadow: 0.2px 0.1px 0.7px rgba(0, 0, 0, 0.02),
+        0.4px 0.3px 1.7px rgba(0, 0, 0, 0.028),
+        0.8px 0.6px 3.1px rgba(0, 0, 0, 0.035),
+        1.3px 1.1px 5.6px rgba(0, 0, 0, 0.042),
+        2.5px 2.1px 10.4px rgba(0, 0, 0, 0.05), 6px 5px 25px rgba(0, 0, 0, 0.07);
+      .label-background {
+        width: 90%;
+        margin: auto;
+        text-align: center;
+        margin-top: 12px;
+        .checkBox {
+          display: flex;
+          width: 70%;
+          margin: auto;
+          justify-content: space-around;
+        }
+      }
+      .ratings {
+        text-align: center;
+        width: 100%;
+        .rating {
+          width: 60%;
+          display: flex;
+          margin: auto;
+        }
+      }
+    }
+    .content {
+      width: 75%;
+      .menu-content {
+        box-shadow: 0.2px 0.1px 0.7px rgba(0, 0, 0, 0.02),
+          0.4px 0.3px 1.7px rgba(0, 0, 0, 0.028),
+          0.8px 0.6px 3.1px rgba(0, 0, 0, 0.035),
+          1.3px 1.1px 5.6px rgba(0, 0, 0, 0.042),
+          2.5px 2.1px 10.4px rgba(0, 0, 0, 0.05),
+          6px 5px 25px rgba(0, 0, 0, 0.07);
+        display: flex;
+        text-align: center;
+        color: rgb(255, 5, 5) !important;
+        border: 1px solid rgb(230, 230, 229);
+        .Tab1 {
+          color: rgb(105, 103, 103) !important;
+        }
+        .Tab2 {
+          color: rgb(255, 255, 255) !important;
+        }
+      }
+      .products2 {
+        box-shadow: 0.2px 0.1px 0.7px rgba(252, 246, 246, 0.02),
+          0.4px 0.3px 1.7px rgba(255, 252, 252, 0.028),
+          0.8px 0.6px 3.1px rgba(240, 235, 235, 0.035),
+          1.3px 1.1px 5.6px rgba(245, 245, 245, 0.042),
+          2.5px 2.1px 10.4px rgba(250, 245, 245, 0.05),
+          6px 5px 25px rgba(241, 239, 239, 0.07);
+        // background-color: rgb(59, 59, 59);
+        background-color: rgb(37, 37, 37);
+
+        border: 1px solid rgb(230, 230, 229);
+        width: 100%;
+        .product {
+          flex-wrap: wrap;
+          justify-content: space-around;
+          display: flex;
+        }
+      }
+      .products1 {
+        box-shadow: 0.2px 0.1px 0.7px rgba(0, 0, 0, 0.02),
+          0.4px 0.3px 1.7px rgba(0, 0, 0, 0.028),
+          0.8px 0.6px 3.1px rgba(0, 0, 0, 0.035),
+          1.3px 1.1px 5.6px rgba(0, 0, 0, 0.042),
+          2.5px 2.1px 10.4px rgba(0, 0, 0, 0.05),
+          6px 5px 25px rgba(0, 0, 0, 0.07);
+        // background-color: rgb(238, 238, 238);
+        width: 100%;
+        .product {
+          flex-wrap: wrap;
+          justify-content: space-around;
+          display: flex;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .main {
+    .main-content {
+      display: block;
+      .menu-right {
+        display: none;
+      }
+    }
+    .content {
+      margin: auto;
+    }
+  }
+}

@@ -1,0 +1,177 @@
+.footer {
+    background-image: url("https://wallpaperaccess.com/full/1261218.jpg");
+    width: 100%;
+    height: 630px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+    margin-top: 100px;
+    .content {
+      max-width: 1300px;
+      margin: auto;
+      height: 100%;
+      width: 87%;
+      .send-mail {
+        width: 85%;
+        margin: auto;
+        padding-top: 60px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        .title {
+          width: 330px;
+          p {
+            color: rgb(250, 241, 241);
+            font-family: sans-serif;
+          }
+          h1 {
+            margin-top: 0;
+            font-size: 35px;
+            font-family: sans-serif;
+            color: rgb(238, 234, 234);
+            // text-shadow: 1px 1px 0 0 black;
+            text-shadow: 0.3px 0.3px 1.4px rgba(75, 73, 73, 0.119),
+            0.6px 0.8px 3.3px rgba(41, 40, 40, 0.172),
+            1.2px 1.5px 6px rgba(26, 23, 23, 0.212),
+            1.9px 2.4px 10px rgba(19, 18, 18, 0.248),
+            3.2px 4px 16.4px rgba(22, 22, 22, 0.288),
+            5.5px 6.9px 28.7px rgba(34, 32, 32, 0.341),
+            12px 15px 62px rgba(22, 21, 21, 0.46);
+          }
+        }
+        .search-mail {
+          text-align: center;
+          width: 450px;
+          justify-content: space-between;
+          padding-top: 30px;
+          .btn-send {
+            // border-radius: 30px;
+            margin-left: 20px;
+            height: 50px;
+          }
+          .search {
+            width: 300px;
+            height: 50px;
+            color: red;
+          }
+        }
+      }
+    }
+    .infomation {
+      width: 100%;
+      margin-top: 40px;
+      .wvp_row1 {
+        background-color: #ffffff;
+        display: flex;
+        justify-content: space-around;
+        
+        .column1 {
+          width: 40%;
+          margin: 40px;
+          color: rgb(133, 127, 127);
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
+          img {
+            width: 40px;
+            margin-bottom: 20px;
+          }
+          .icon {
+            display: flex;
+            font-size: 25px;
+            margin-top: 20px;
+            width: 40%;
+            justify-content: space-around;
+          }
+        }
+        .column2 {
+          width: 55%;
+          margin: 40px;
+          // background-color: rebeccapurple;
+          display: flex;
+          justify-content: space-around;
+          .option {
+            width: 33%;
+            p{
+              text-align: center;
+              font-size: 20px;
+              font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+              color: rgb(70, 68, 68);
+            }
+            ul{
+              color: rgb(133, 127, 127);
+              list-style-type: none;
+              li{
+                font-size: 15px;
+                margin-top: 10px;
+              }
+            }
+          }
+        }
+      }
+      .wvp_row2 {
+        background-color: #14b9d5;
+        // height: 60px;
+        display: flex;
+        justify-content: space-between;
+        padding: 17px;
+        p{
+          margin-bottom: 0;
+          color: #ffffff;
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 1150px) {
+    .footer{
+      .infomation{
+        .wvp_row1{
+          padding-top: 10px;
+          display: block;
+          .column1{
+            width: 90%;
+            text-align: center;
+            margin: 20px 10px;
+            .icon{
+              margin: auto;
+            }
+          }
+          .column2{
+            width: 90%;
+            margin: 20px 0;
+            .option{
+              width: 33%;
+              ul{
+                width: 100%;
+                li{
+                  margin-left: 0;
+                  font-size: 10px !important;
+                  
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 450px) {
+    .column2{
+      width: 100% !important;
+      .option{
+        p{
+          height: 35px;
+          font-size: 15px !important;
+        }
+        ul{
+          li{
+            .angleRight{
+              display: none;
+            }
+          }
+        }
+      }
+    }
+    
+  }
+  

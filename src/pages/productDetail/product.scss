@@ -1,0 +1,221 @@
+.product-container {
+    width: 100%;
+    position: relative;
+    background-color: rgb(243, 243, 243);
+    text-align: left;
+    .content-Top {
+      padding-top: 80px;
+      height: 500px;
+      width: 100%;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position-y: top;
+      background-image: url("https://wallpaperaccess.com/full/279618.jpg");
+    }
+    .main {
+      width: 90%;
+      margin: auto;
+      max-width: 1450px;
+      .main-content {
+        background-color: white;
+        display: flex;
+        // margin-top: 30px;
+        .image {
+          padding-top: 50px;
+          width: 40%;
+          text-align: center;
+          display: block;
+          img {
+            width: 65%;
+            height: 430px;
+          }
+          .link {
+            margin: 20px;
+            width: 100%;
+            text-align: left;
+            display: flex;
+            p {
+              font-size: 15px;
+              margin-right: 10px;
+            }
+            .icon {
+              font-size: 20px;
+            }
+            .fb {
+              color: #25479b;
+            }
+            .ig {
+              color: rgb(204, 89, 22);
+            }
+            .tw {
+              color: #55acee;
+            }
+            .yt {
+              color: #ff0000;
+            }
+          }
+        }
+        .info {
+          padding-top: 50px;
+          width: 60%;
+          border-left: 1px solid rgb(230, 226, 226);
+          // background-color: yellow;
+          .header {
+            width: 90%;
+            margin: auto;
+            min-width: 650px;
+            p {
+              font-family: sans-serif;
+              font-size: 30px;
+              margin-bottom: 10px;
+            }
+            .row1 {
+              width: 45%;
+              display: flex;
+              .start {
+                width: 40%;
+              }
+              i {
+                border-left: 1px solid rgb(184, 181, 181);
+                text-align: center;
+                width: 40%;
+                padding-bottom: 0;
+                margin-bottom: 0;
+                color: red;
+              }
+            }
+            .row2 {
+              // height: 300px;
+              margin: 30px 0;
+              display: flex;
+              justify-content: space-between;
+              .col1 {
+                width: 67%;
+                .inf {
+                  padding: 20px;
+                  background-color: rgb(245, 248, 250);
+                  width: 100%;
+                  .price {
+                    display: flex;
+                    padding-bottom: 20px;
+                    p {
+                      color: red;
+                      margin: 0;
+                      span {
+                        text-decoration-line: underline;
+                      }
+                    }
+                    .deal {
+                      margin-left: 20px;
+                      border: 1px solid red;
+                      height: 25px;
+                      margin-top: 10px;
+                      border-radius: 5px;
+  
+                      p {
+                        padding: 2px;
+                        font-size: 15px;
+                      }
+                    }
+                  }
+                  img {
+                    width: 150px;
+                  }
+                  .ship {
+                    width: 230px;
+                    display: flex;
+                    justify-content: space-between;
+                    img {
+                      width: 100px;
+                    }
+                  }
+                }
+                .note {
+                  margin-top: 20px;
+                  border-top: 1px solid rgb(230, 226, 226);
+                  p {
+                    padding-top: 15px;
+                    font-size: 13px;
+                  }
+                }
+                .buy {
+                  border-top: 1px solid rgb(230, 226, 226);
+                  margin-top: 15px;
+                  padding: 15px 0;
+                  .minus {
+                    margin: 0;
+                    font-size: 12px;
+                  }
+                  .plus {
+                    margin: 0;
+                    font-size: 12px;
+                  }
+                  .input-quantity {
+                    width: 40px;
+                    margin: 0 5px;
+                    font-size: 12px;
+                    input[type="number"]::-webkit-inner-spin-button,
+                    input[type="number"]::-webkit-outer-spin-button {
+                      -webkit-appearance: none;
+                      -moz-appearance: none;
+                      appearance: none;
+                      margin: 0;
+                    }
+                  }
+                  .btn-buy {
+                    width: 200px;
+                    height: 50px;
+                    margin-top: 20px;
+                  }
+                }
+              }
+              .col2 {
+                width: 30%;
+                border: 1px solid rgb(230, 226, 226);
+              }
+            }
+          }
+        }
+      }
+      .similar-product {
+        background-color: white;
+        margin: 70px 0 20px 0;
+        padding: 0;
+        .header {
+          width: 95%;
+          margin: auto;
+          p {
+            padding: 25px 0;
+            font-size: 20px;
+            margin-bottom: 0;
+          }
+        }
+      }
+      .intro{
+        padding: 25px;
+        background-color: white;
+        margin-bottom: 20px;
+        p{
+          font-size: 20px;
+        }
+      }
+      .form-comment {
+        // height: 500px;
+        padding: 25px;
+        background-color: white;
+        .header {
+          width: 95%;
+          margin: auto;
+          p {
+            font-size: 20px;
+            margin-bottom: 0;
+          }
+        }
+        .form-send{
+          max-width: 640px;
+          width: 95%;
+        }
+      }
+    }
+  }
+  
