@@ -163,6 +163,13 @@ function Home() {
       });
       setData(InfoData.slice(24, 36));
     }
+    if (activePage === 4) {
+      window.scrollTo({
+        top: 400,
+        behavior: "smooth",
+      });
+      setData(InfoData.slice(36, 48));
+    }
   };
 
   const changeBackground = () => {

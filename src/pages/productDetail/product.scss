@@ -1,3 +1,4 @@
+
 .product-container {
     width: 100%;
     position: relative;
@@ -162,11 +163,29 @@
                       margin: 0;
                     }
                   }
-                  .btn-buy {
-                    width: 200px;
-                    height: 50px;
-                    margin-top: 20px;
+                  .btn {
+                    width: 170px;
+                    height: 40px;
+                    margin: 20px;
+                    margin-left: 0;
+                    &-buy{
+                      background-color: rgb(53, 53, 53);
+                      &:hover{
+                        color: rgb(194, 194, 194);
+                      background-color: rgb(41, 41, 41);
+  
+                      }
+                    }
+                    &-addToCart{
+                      color: black;
+                      background-color: rgb(255, 255, 255);
+                      border: 1px solid black;
+                      &:hover{
+                      background-color: rgb(243, 235, 235);
+                      }
+                    }
                   }
+                  
                 }
               }
               .col2 {

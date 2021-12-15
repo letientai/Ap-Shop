@@ -4,5 +4,5 @@ export const SignupSchema = Yup.object().shape({
     .required("Bắt buộc")
     .min(6, "Tối thiểu 6 ký tự")
     .max(30, "Quá dài"),
-  email: Yup.string().email("Email không hợp lệ").required("Bắt buộc"),
+    username: Yup.string().required("Bắt buộc"),
 });

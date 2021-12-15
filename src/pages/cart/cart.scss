@@ -6,4 +6,21 @@
     width: 90%;
     margin: auto;
     max-width: 1450px;
+    .table{
+        width: 100%;
+        .image{
+            width: 70px;
+            height: 100px;
+            padding: 15px;
+        }
+        .text-table{
+            padding-left: 1.7%;
+            padding-top: 45px;
+            font-weight: bold;
+            font-size: 15px;
+        }
+        .btn-delete{
+            padding-top: 30px;
+        }
+    }
 }

@@ -8,10 +8,10 @@ function Router() {
     return(
         <BrowserRouter>
             <Switch>
-                <Route path="/ap-shop" component={Home} exact/>
-                <Route path="/ap-shop/product/:id" component={Product} />
-                <Route path="/ap-shop/buy/:id" component={Buy} />
-                <Route path="/ap-shop/cart" component={Cart} />
+                <Route path="/Ap-Shop" component={Home} exact/>
+                <Route path="/Ap-Shop/product/:id" component={Product} />
+                <Route path="/Ap-Shop/buy/:id" component={Buy} />
+                <Route path="/Ap-Shop/cart" component={Cart} />
             </Switch>
         </BrowserRouter>
     )

@@ -4,14 +4,21 @@ import Navbar from "../../components/navbar/navbar";
 import { Table } from "react-bootstrap";
 import { Dimmer, Loader } from "semantic-ui-react";
 import IconButton from "@mui/material/IconButton";
-import DeleteIcon from '@mui/icons-material/Delete';
+import DeleteIcon from "@mui/icons-material/Delete";
 import "./cart.scss";
+import dataCart from "../../assets/data/dataCart";
 function Cart() {
   const [loadingPage, setLoadingPage] = useState(true);
+  const [toTal, setToTalPayMent] = useState(0);
 
   setTimeout(function () {
     setLoadingPage(false);
   }, 1000);
+
+  const deleteItem = (id) => {
+    dataCart.splice(id, 1);
+    setToTalPayMent(toTal + 1);
+  };
 
   return (
     <div className="cart-container">
@@ -27,7 +34,7 @@ function Cart() {
           <Table striped bordered hover>
             <thead>
               <tr>
-                <th>#</th>
+                <th>Ảnh</th>
                 <th>Tên sản phẩm</th>
                 <th>Giá</th>
                 <th>Số lượng</th>
@@ -36,36 +43,31 @@ function Cart() {
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>1</td>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-                <td>Otto</td>
-                <td>
-                  <IconButton aria-label="delete" size="small">
-                    <DeleteIcon />
-                  </IconButton>
-                </td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>Thornton</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>@twitter</td>
-                <td>Larry the Bird</td>
-                <td>@twitter</td>
-                <td>@twitter</td>
-                <td>Larr</td>
-              </tr>
+              {dataCart.map((item, index) => {
+                return (
+                  <tr key={index}>
+                    <img src={item?.image} alt="" className="image" />
+                    <td className="text-table">{item?.name}</td>
+                    <td className="text-table">{item?.price}đ</td>
+                    <td className="text-table">4</td>
+                    <td className="text-table">{item?.price}đ</td>
+                    <td className="text-table btn-delete">
+                      <IconButton
+                        aria-label="delete"
+                        size="large"
+                        onClick={() => deleteItem(index)}
+                      >
+                        <DeleteIcon fontSize="inherit" />
+                      </IconButton>
+                    </td>
+                  </tr>
+                );
+              })}
             </tbody>
           </Table>
+        </div>
+        <div className="payment">
+          {toTal != 0 && <span> Tổng tiền: {toTal}</span>}
         </div>
       </div>
     </div>
