@@ -41,7 +41,7 @@ function Buy() {
     setModalShow(false);
     setOpen(true);
     setTimeout(function () {
-      history.push("/ap-shop")
+      history.push("/Ap-Shop")
     }, 1200);
   };
 
@@ -58,7 +58,7 @@ function Buy() {
   }, []);
 
   const fetchData = () => {
-    for (var i = 0; i < 28; i++) {
+    for (var i = 0; i < InfoData.length; i++) {
       if (parseInt(InfoData[i].id) === parseInt(id)) {
         setData(InfoData[i]);
       }

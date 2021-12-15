@@ -16,6 +16,7 @@ import {
   TextArea,
 } from "semantic-ui-react";
 import Buttonn from "@mui/material/Button";
+import Alert from "@mui/material/Alert";
 import { Table } from "react-bootstrap";
 import CardItem from "../../components/cardItem/cardItem";
 import { Carousel } from "@trendyol-js/react-carousel";
@@ -37,7 +38,7 @@ function Product() {
   }, [location]);
 
   const fetchData = () => {
-    for (var i = 0; i < 28; i++) {
+    for (var i = 0; i < 40; i++) {
       if (parseInt(InfoData[i].id) === parseInt(ID)) {
         setData(InfoData[i]);
         setDataItem(
@@ -85,12 +86,13 @@ function Product() {
   }, 1000);
 
   const moveToBuy = () => {
-    history.push(`/ap-shop/buy/${data.id}and${quantity}`);
+    history.push(`/Ap-Shop/buy/${data.id}and${quantity}`);
   };
   // const onChang = () =>{
 
   //   console.log("ahihi");
   // }
+ 
 
   return (
     <div>
@@ -186,11 +188,18 @@ function Product() {
                       </div>
                       <Buttonn
                         variant="contained"
-                        className="btn-buy"
+                        className="btn btn-buy"
                         color="error"
                         onClick={moveToBuy}
                       >
                         Mua ngay
+                      </Buttonn>
+                      <Buttonn
+                        variant="contained"
+                        className="btn btn-addToCart"
+                        color="error"
+                      >
+                        Thêm vào giỏ hàng
                       </Buttonn>
                     </div>
                   </div>
@@ -286,6 +295,7 @@ function Product() {
         </div>
         <Footer />
       </div>
+  
     </div>
   );
 }

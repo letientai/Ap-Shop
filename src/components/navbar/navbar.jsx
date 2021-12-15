@@ -53,7 +53,7 @@ const Navbar = (props) => {
   };
 
   const sendData = async () => {
-    await history.push(`/ap-shop`);
+    await history.push(`/Ap-Shop`);
     if (checkPage[0] === "home") {
       await props.passDataToParent(search);
     } else {
@@ -87,7 +87,7 @@ const Navbar = (props) => {
   };
 
   const moveToHome = () => {
-    history.push("/ap-shop");
+    history.push("/Ap-Shop");
   };
 
   const showLogin = () => {
@@ -147,7 +147,7 @@ const Navbar = (props) => {
         </div>
         <div className="icon-user">
           <Icon name="user" className="icon" onClick={showLogin} />
-          <Icon name="cart" className="icon" onClick={()=>{history.push("/ap-shop/cart")}}/>
+          <Icon name="cart" className="icon" onClick={()=>{history.push("/Ap-Shop/cart")}}/>
         </div>
         <div className="menuRight">
           <div className="menu" id="menu">
