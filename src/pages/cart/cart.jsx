@@ -7,7 +7,7 @@ import IconButton from "@mui/material/IconButton";
 import DeleteIcon from "@mui/icons-material/Delete";
 import "./cart.scss";
 import dataCart from "../../assets/data/dataCart";
-import { Prev } from "react-bootstrap/esm/PageItem";
+
 function Cart() {
   const [loadingPage, setLoadingPage] = useState(true);
   const [toTal, setToTalPayMent] = useState();
