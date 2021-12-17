@@ -17,7 +17,7 @@ import Typography from "@mui/material/Typography";
 import Tab from "@mui/material/Tab";
 import Tabs from "@mui/material/Tabs";
 import Footer from "../../components/footer/footer";
-import Alert from '@mui/material/Alert';
+import Alert from "@mui/material/Alert";
 function Home() {
   const [data, setData] = useState([]);
   const [page, setPage] = useState(1);
@@ -27,14 +27,15 @@ function Home() {
   const [value, setValue] = useState("1");
   const [loadingPage, setLoadingPage] = useState(true);
   const checkHome = useState("home");
-
+  const currenUser = localStorage.getItem("customerName");
+  const [checkLogin, setCheckLogin] = useState(false)
   setTimeout(function () {
     setLoadingPage(false);
   }, 1000);
 
   useEffect(() => {
     fetchData();
-  }, []);
+  }, [checkLogin]);
 
   const fetchData = () => {
     setData(
@@ -208,7 +209,7 @@ function Home() {
       setValue("4");
     } else if (data === "chế độ ban đêm" || data === "ban đêm") {
       // alert("Bạn đã đổi sang chế độ ban đêm");
-      <Alert severity="info">Bạn đã đổi sang chế độ ban đêm</Alert>
+      <Alert severity="info">Bạn đã đổi sang chế độ ban đêm</Alert>;
       setBackground(2);
     } else if (
       data === "chế độ ban ngày" ||
@@ -216,7 +217,7 @@ function Home() {
       data === "morning"
     ) {
       // alert("Bạn đã đổi sang chế độ ban ngày");
-      <Alert severity="info">Bạn đã đổi sang chế độ ban đêm</Alert>
+      <Alert severity="info">Bạn đã đổi sang chế độ ban đêm</Alert>;
       setBackground(1);
     } else {
       setData(
@@ -226,19 +227,23 @@ function Home() {
       );
     }
   };
- 
+
+  const signOut = () =>{
+    setCheckLogin(!checkLogin)
+  }
 
   return (
     <div>
       <Dimmer active={loadingPage} inverted className="dimmer">
         <Loader inverted>Loading</Loader>
       </Dimmer>
-      <div className={background === 1 ? "home-container1" : "home-container2"} >
-        <div className="home-top" >
+      <div className={background === 1 ? "home-container1" : "home-container2"}>
+        <div className="home-top">
           <Navbar
             passDataToParent={doSomethingWithDataFromChild}
             transcript={doSomethingWithTranscriptFromChild}
             checkpage={checkHome}
+            signOut={signOut}
           />
           <div className="content-Top">
             <div className="content">
@@ -258,10 +263,11 @@ function Home() {
                   <li>Oppo</li>
                   <li>Vivo</li>
                 </ul>
-               
+
                 <Icon name="x" onClick={close} style={{ cursor: "pointer" }} />
               </Segment>
             </div>
+            {currenUser && <span>Xin chào, {currenUser}</span>}
           </div>
         </div>
         <div className="main">
@@ -276,7 +282,7 @@ function Home() {
                   />
                   <p>Chế độ ban đêm</p>
                 </div>
-                <hr className="hr"/>
+                <hr className="hr" />
               </div>
               <div className="ratings">
                 <h4>Đánh giá</h4>
@@ -356,7 +362,7 @@ function Home() {
             </div>
           </div>
         </div>
-        <Footer/>
+        <Footer />
       </div>
     </div>
   );

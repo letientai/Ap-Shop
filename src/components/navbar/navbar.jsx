@@ -15,6 +15,8 @@ const Navbar = (props) => {
   const [checkRegister, setCheckRegister] = useState(false);
   const history = useHistory();
   const checkPage = props.checkpage;
+  const currenUser = localStorage.getItem("customerName");
+
   // const id = location.pathname?.split("/")[1];
   // const location = useLocation();
 
@@ -97,6 +99,7 @@ const Navbar = (props) => {
 
   const signaling = () => {
     setCheckLogin(false);
+    props.signOut(currenUser)
   };
 
   const showRegister = () => {
@@ -112,6 +115,11 @@ const Navbar = (props) => {
     setCheckRegister(false);
     setCheckLogin(true);
   };
+
+  const signOut = () =>{
+    localStorage.clear()
+    props.signOut(currenUser)
+  }
 
   return (
     <>
@@ -146,8 +154,18 @@ const Navbar = (props) => {
           </div>
         </div>
         <div className="icon-user">
-          <Icon name="user" className="icon" onClick={showLogin} />
-          <Icon name="cart" className="icon" onClick={()=>{history.push("/Ap-Shop/cart")}}/>
+          {currenUser ? (
+            <Icon name="sign-out" className="icon" onClick={signOut} />
+          ) : (
+            <Icon name="user" className="icon" onClick={showLogin} />
+          )}
+          <Icon
+            name="cart"
+            className="icon"
+            onClick={() => {
+              history.push("/Ap-Shop/cart");
+            }}
+          />
         </div>
         <div className="menuRight">
           <div className="menu" id="menu">
