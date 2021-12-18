@@ -31,12 +31,11 @@ function Product() {
   const checkProduct = useState("product");
   const [loadingPage, setLoadingPage] = useState(true);
   const [quantity, setQuantity] = useState(1);
+  const [isSuccess, setIsSuccess] = useState(false);
   const history = useHistory();
-
   useEffect(() => {
     fetchData();
   }, [location]);
-
   const fetchData = () => {
     for (var i = 0; i < 40; i++) {
       if (parseInt(InfoData[i].id) === parseInt(ID)) {
@@ -65,11 +64,18 @@ function Product() {
     // );
     console.log("data", data);
   };
-
   const onChangeInput = (e) => {
     setQuantity(e.target.value);
   };
-
+  const hendleBuy = () => setIsSuccess(true);
+  useEffect(() => 
+    {
+      const timerId =setTimeout(() => setIsSuccess(false),2000);
+      return () => {
+        clearTimeout(timerId);
+      }
+    }
+  ,[isSuccess])
   const onchangeQuantity = (name) => {
     if (name === "plus") {
       setQuantity(parseInt(quantity) + 1);
@@ -198,6 +204,7 @@ function Product() {
                         variant="contained"
                         className="btn btn-addToCart"
                         color="error"
+                        onClick={hendleBuy}
                       >
                         Thêm vào giỏ hàng
                       </Buttonn>
@@ -295,7 +302,11 @@ function Product() {
         </div>
         <Footer />
       </div>
-  
+      {isSuccess 
+      && 
+      <Alert className="by-success" variant="filled" severity="success">
+        Thêm thành công!
+      </Alert>}
     </div>
   );
 }

@@ -1,4 +1,13 @@
-
+@keyframes  fade-pour-down{
+  from {
+    opacity: 0;
+    transform: scale(0)
+  }
+  to {
+    opacity: 1;
+    transform: scale(1)
+  }
+}
 .product-container {
     width: 100%;
     position: relative;
@@ -237,4 +246,11 @@
       }
     }
   }
-  
+  .by-success{
+    position: fixed;
+    display: inline-block;
+    bottom: 20px;
+    left: 20px;
+    transform-origin: left center;
+    animation: fade-pour-down ease .2s;
+  }
