@@ -249,8 +249,9 @@
   .by-success{
     position: fixed;
     display: inline-block;
-    bottom: 20px;
-    left: 20px;
+    bottom: 50px;
+    left: 50px;
     transform-origin: left center;
     animation: fade-pour-down ease .2s;
+    z-index: 2;
   }

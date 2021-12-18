@@ -32,6 +32,7 @@ function Product() {
   const [loadingPage, setLoadingPage] = useState(true);
   const [quantity, setQuantity] = useState(1);
   const [isSuccess, setIsSuccess] = useState(false);
+  const [checkLogin, setCheckLogin] = useState(false)
   const history = useHistory();
   useEffect(() => {
     fetchData();
@@ -67,7 +68,9 @@ function Product() {
   const onChangeInput = (e) => {
     setQuantity(e.target.value);
   };
-  const hendleBuy = () => setIsSuccess(true);
+
+  const handleBuy = () => setIsSuccess(true);
+  
   useEffect(() => 
     {
       const timerId =setTimeout(() => setIsSuccess(false),2000);
@@ -76,6 +79,7 @@ function Product() {
       }
     }
   ,[isSuccess])
+
   const onchangeQuantity = (name) => {
     if (name === "plus") {
       setQuantity(parseInt(quantity) + 1);
@@ -94,11 +98,10 @@ function Product() {
   const moveToBuy = () => {
     history.push(`/Ap-Shop/buy/${data.id}and${quantity}`);
   };
-  // const onChang = () =>{
-
-  //   console.log("ahihi");
-  // }
  
+  const signOut = () =>{
+    setCheckLogin(!checkLogin)
+  }
 
   return (
     <div>
@@ -110,11 +113,10 @@ function Product() {
           <Navbar
             checkpage={checkProduct}
             passDataToParent={doSomethingWithDataFromChild}
+            signOut={signOut}
           />
+        
           <div className="content-Top">
-            {/* <div className="content">
-
-          </div> */}
           </div>
         </div>
         <div className="main">
@@ -204,7 +206,7 @@ function Product() {
                         variant="contained"
                         className="btn btn-addToCart"
                         color="error"
-                        onClick={hendleBuy}
+                        onClick={handleBuy}
                       >
                         Thêm vào giỏ hàng
                       </Buttonn>

@@ -29,7 +29,11 @@
         justify-content: space-between;
         align-items: center;
         font-size: 16px;
-        .payMent{
+        span{
+            font-weight: bolder;
+            font-size: 17px;
+        }
+        .btn-payMent{
             border: none;
             padding: 10px;
             border-radius: 4px;
