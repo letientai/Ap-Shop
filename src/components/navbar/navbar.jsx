@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./navbar.scss";
 import logo from "../../assets/logo/logo.png";
 import { Icon, Input, Header } from "semantic-ui-react";
@@ -6,6 +6,7 @@ import { useHistory } from "react-router-dom";
 import SpeechRecognition, {
   useSpeechRecognition,
 } from "react-speech-recognition";
+import Alert from "@mui/material/Alert";
 import { Login } from "../login/login";
 import { Register } from "../register/register";
 const Navbar = (props) => {
@@ -15,6 +16,9 @@ const Navbar = (props) => {
   const [checkRegister, setCheckRegister] = useState(false);
   const history = useHistory();
   const checkPage = props.checkpage;
+  const currenUser = localStorage.getItem("customerName");
+  const [isSuccess, setIsSuccess] = useState(false);
+
   // const id = location.pathname?.split("/")[1];
   // const location = useLocation();
 
@@ -97,6 +101,7 @@ const Navbar = (props) => {
 
   const signaling = () => {
     setCheckLogin(false);
+    props.signOut(currenUser);
   };
 
   const showRegister = () => {
@@ -111,6 +116,19 @@ const Navbar = (props) => {
   const finishRegister = () => {
     setCheckRegister(false);
     setCheckLogin(true);
+  };
+
+  const signOut = () => {
+    localStorage.clear();
+    props.signOut(currenUser);
+  };
+
+  const handleBuy = () => {
+    setIsSuccess(true);
+    const timerId = setTimeout(() => setIsSuccess(false), 2000);
+    return () => {
+      clearTimeout(timerId);
+    };
   };
 
   return (
@@ -146,8 +164,24 @@ const Navbar = (props) => {
           </div>
         </div>
         <div className="icon-user">
-          <Icon name="user" className="icon" onClick={showLogin} />
-          <Icon name="cart" className="icon" onClick={()=>{history.push("/Ap-Shop/cart")}}/>
+          {currenUser ? (
+            <Icon name="sign-out" className="icon" onClick={signOut} />
+          ) : (
+            <Icon name="user" className="icon" onClick={showLogin} />
+          )}
+          {currenUser ? (
+            <Icon
+              name="cart"
+              className="icon"
+              onClick={() => history.push("/Ap-Shop/cart")}
+            />
+          ) : (
+            <Icon
+              name="cart"
+              className="icon"
+              onClick={handleBuy}
+            />
+          )}
         </div>
         <div className="menuRight">
           <div className="menu" id="menu">
@@ -166,6 +200,11 @@ const Navbar = (props) => {
           </div>
         </div>
       </div>
+      {isSuccess && (
+        <Alert className="by-success" variant="filled" severity="info">
+          Đăng nhập để tiếp tục!!
+        </Alert>
+      )}
     </>
   );
 };

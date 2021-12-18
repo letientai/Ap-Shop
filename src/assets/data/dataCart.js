@@ -84,30 +84,5 @@ const dataCart = [
 	image : 'https://www.xtsmart.vn/vnt_upload/product/05_2021/thumbs/600_galaxy_s20_ultra_xam.png',
 	price : 14350000
 },
-{
-	id: 8,
-	sold: 330,
-	rating: 4.5,
-	theloai: "OPPO",
-	name: "OPPO Reno6 Pro 5G",
-	chip: "Snapdragon 870 5G",
-	ram : "12GB",
-	memory: "256GB",
-	image : 'https://cdn.tgdd.vn/Products/Images/42/236187/oppo-reno6-pro-blue-1-600x600.jpg',
-	price : 18490000
-},
-{
-	id:9 ,
-	sold: 470,
-	rating: 4.5,
-	theloai: "Samsung",
-	name: "Samsung galaxy S10 plus",
-	chip: "Exynos 9820",
-	ram : "8GB",
-	memory: "512GB",
-	image : 'https://www.xtmobile.vn/vnt_upload/product/06_2019/s10_den_800x800_min_3.jpg',
-	price : 7150000
-},
- 
 ];
 export default dataCart;
