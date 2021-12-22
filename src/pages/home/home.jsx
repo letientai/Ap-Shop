@@ -232,6 +232,58 @@ function Home() {
     setCheckLogin(!checkLogin)
   }
 
+  const handleBrand = (option)=>{
+    if(option === 1){
+      setData(
+        InfoData.filter((item) =>
+          item?.theloai?.toLocaleLowerCase()?.includes("Iphone".toLocaleLowerCase())
+        )
+      );
+    }
+    if(option === 2){
+      setData(
+        InfoData.filter((item) =>
+          item?.theloai?.toLocaleLowerCase()?.includes("Samsung".toLocaleLowerCase())
+        )
+      );
+    }
+    if(option === 3){
+      setData(
+        InfoData.filter((item) =>
+          item?.theloai?.toLocaleLowerCase()?.includes("Sony".toLocaleLowerCase())
+        )
+      );
+    }
+    if(option === 4){
+      setData(
+        InfoData.filter((item) =>
+          item?.theloai?.toLocaleLowerCase()?.includes("Nokia".toLocaleLowerCase())
+        )
+      );
+    }
+    if(option === 5){
+      setData(
+        InfoData.filter((item) =>
+          item?.theloai?.toLocaleLowerCase()?.includes("Xiaomi".toLocaleLowerCase())
+        )
+      );
+    }
+    if(option === 6){
+      setData(
+        InfoData.filter((item) =>
+          item?.theloai?.toLocaleLowerCase()?.includes("Oppo".toLocaleLowerCase())
+        )
+      );
+    }
+    if(option === 7){
+      setData(
+        InfoData.filter((item) =>
+          item?.theloai?.toLocaleLowerCase()?.includes("Vivo".toLocaleLowerCase())
+        )
+      );
+    }
+  }
+
   return (
     <div>
       <Dimmer active={loadingPage} inverted className="dimmer">
@@ -254,14 +306,13 @@ function Home() {
               <Segment className="category" id="category">
                 <ul>
                   <h3>Phổ biến</h3>
-                  <li>Apple</li>
-                  <li>Samsung</li>
-                  <li>Sony</li>
-                  <li>Nokia</li>
-                  <li>LG</li>
-                  <li>Xiaomi</li>
-                  <li>Oppo</li>
-                  <li>Vivo</li>
+                  <li onClick={()=>handleBrand(1)}>Iphone</li>
+                  <li onClick={()=>handleBrand(2)}>Samsung</li>
+                  <li onClick={()=>handleBrand(3)}>Sony</li>
+                  <li onClick={()=>handleBrand(4)}>Nokia</li>
+                  <li onClick={()=>handleBrand(5)}>Xiaomi</li>
+                  <li onClick={()=>handleBrand(6)}>Oppo</li>
+                  <li onClick={()=>handleBrand(7)}>Vivo</li>
                 </ul>
 
                 <Icon name="x" onClick={close} style={{ cursor: "pointer" }} />

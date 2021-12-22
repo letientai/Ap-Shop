@@ -87,11 +87,11 @@ export const Login = (props) => {
           {({ errors, touched }) => (
             <Form className="form">
               <div>
-                <label htmlFor="Email">Email</label>
+                <label htmlFor="Email">Email or Phone</label>
                 <FastField
                   name="username"
                   className="formField"
-                  placeholder="Email..."
+                  placeholder="Ex: 0916..."
                 />
                 {errors.username && touched.username ? (
                   <div className="formError">{errors.username}</div>
@@ -103,7 +103,7 @@ export const Login = (props) => {
                 <FastField
                   name="password"
                   className="formField"
-                  placeholder="Password..."
+                  placeholder="Ex: 1234..."
                   type="password"
                 />
                 {errors.password && touched.password ? (

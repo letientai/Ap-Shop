@@ -18,6 +18,7 @@ const Navbar = (props) => {
   const checkPage = props.checkpage;
   const currenUser = localStorage.getItem("customerName");
   const [isSuccess, setIsSuccess] = useState(false);
+  const [message, setMessage] = useState("");
 
   // const id = location.pathname?.split("/")[1];
   // const location = useLocation();
@@ -116,6 +117,12 @@ const Navbar = (props) => {
   const finishRegister = () => {
     setCheckRegister(false);
     setCheckLogin(true);
+    setMessage(" Đăng ký thành công!!")
+    setIsSuccess(true);
+    const timerId = setTimeout(() => setIsSuccess(false), 2000);
+    return () => {
+      clearTimeout(timerId);
+    };
   };
 
   const signOut = () => {
@@ -123,7 +130,8 @@ const Navbar = (props) => {
     props.signOut(currenUser);
   };
 
-  const handleBuy = () => {
+  const moveToCart = () => {
+    setMessage(" Đăng nhập để tiếp tục!!")
     setIsSuccess(true);
     const timerId = setTimeout(() => setIsSuccess(false), 2000);
     return () => {
@@ -179,7 +187,7 @@ const Navbar = (props) => {
             <Icon
               name="cart"
               className="icon"
-              onClick={handleBuy}
+              onClick={moveToCart}
             />
           )}
         </div>
@@ -202,7 +210,7 @@ const Navbar = (props) => {
       </div>
       {isSuccess && (
         <Alert className="by-success" variant="filled" severity="info">
-          Đăng nhập để tiếp tục!!
+          {message}
         </Alert>
       )}
     </>
