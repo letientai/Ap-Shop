@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/Ap-Shop/static/css/main.70d59399.chunk.css",
-    "main.js": "/Ap-Shop/static/js/main.71449b80.chunk.js",
-    "main.js.map": "/Ap-Shop/static/js/main.71449b80.chunk.js.map",
-    "runtime-main.js": "/Ap-Shop/static/js/runtime-main.14697aed.js",
-    "runtime-main.js.map": "/Ap-Shop/static/js/runtime-main.14697aed.js.map",
-    "static/css/2.16041e32.chunk.css": "/Ap-Shop/static/css/2.16041e32.chunk.css",
-    "static/js/2.4af36d06.chunk.js": "/Ap-Shop/static/js/2.4af36d06.chunk.js",
-    "static/js/2.4af36d06.chunk.js.map": "/Ap-Shop/static/js/2.4af36d06.chunk.js.map",
-    "static/js/3.950730d0.chunk.js": "/Ap-Shop/static/js/3.950730d0.chunk.js",
-    "static/js/3.950730d0.chunk.js.map": "/Ap-Shop/static/js/3.950730d0.chunk.js.map",
+    "main.css": "/Ap-Shop/static/css/main.7172de97.chunk.css",
+    "main.js": "/Ap-Shop/static/js/main.694686a0.chunk.js",
+    "main.js.map": "/Ap-Shop/static/js/main.694686a0.chunk.js.map",
+    "runtime-main.js": "/Ap-Shop/static/js/runtime-main.c1f2caf9.js",
+    "runtime-main.js.map": "/Ap-Shop/static/js/runtime-main.c1f2caf9.js.map",
+    "static/css/2.ed4f69c8.chunk.css": "/Ap-Shop/static/css/2.ed4f69c8.chunk.css",
+    "static/js/2.1dd62a42.chunk.js": "/Ap-Shop/static/js/2.1dd62a42.chunk.js",
+    "static/js/2.1dd62a42.chunk.js.map": "/Ap-Shop/static/js/2.1dd62a42.chunk.js.map",
+    "static/js/3.61e94be4.chunk.js": "/Ap-Shop/static/js/3.61e94be4.chunk.js",
+    "static/js/3.61e94be4.chunk.js.map": "/Ap-Shop/static/js/3.61e94be4.chunk.js.map",
     "index.html": "/Ap-Shop/index.html",
-    "static/css/2.16041e32.chunk.css.map": "/Ap-Shop/static/css/2.16041e32.chunk.css.map",
-    "static/css/main.70d59399.chunk.css.map": "/Ap-Shop/static/css/main.70d59399.chunk.css.map",
-    "static/js/2.4af36d06.chunk.js.LICENSE.txt": "/Ap-Shop/static/js/2.4af36d06.chunk.js.LICENSE.txt",
+    "static/css/2.ed4f69c8.chunk.css.map": "/Ap-Shop/static/css/2.ed4f69c8.chunk.css.map",
+    "static/css/main.7172de97.chunk.css.map": "/Ap-Shop/static/css/main.7172de97.chunk.css.map",
+    "static/js/2.1dd62a42.chunk.js.LICENSE.txt": "/Ap-Shop/static/js/2.1dd62a42.chunk.js.LICENSE.txt",
     "static/media/apple.a5e879bb.svg": "/Ap-Shop/static/media/apple.a5e879bb.svg",
     "static/media/semantic.min.css": "/Ap-Shop/static/media/outline-icons.ddae9b1b.woff",
     "static/media/facebook.b419f3ae.svg": "/Ap-Shop/static/media/facebook.b419f3ae.svg",
@@ -22,10 +22,10 @@
     "static/media/zalo.0f1c0bbc.svg": "/Ap-Shop/static/media/zalo.0f1c0bbc.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.14697aed.js",
-    "static/css/2.16041e32.chunk.css",
-    "static/js/2.4af36d06.chunk.js",
-    "static/css/main.70d59399.chunk.css",
-    "static/js/main.71449b80.chunk.js"
+    "static/js/runtime-main.c1f2caf9.js",
+    "static/css/2.ed4f69c8.chunk.css",
+    "static/js/2.1dd62a42.chunk.js",
+    "static/css/main.7172de97.chunk.css",
+    "static/js/main.694686a0.chunk.js"
   ]
 }
