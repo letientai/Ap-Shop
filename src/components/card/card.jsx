@@ -12,7 +12,6 @@ const Card = (props) => {
   };
 
   return (
-    <a href="">
     <div
       className={props.bk === 1 ? "card-container1" : "card-container2"}
       onClick={moveToDetail}
@@ -40,7 +39,6 @@ const Card = (props) => {
         </div>
       </div>
     </div>
-    </a>
   );
 };
 export default Card;
