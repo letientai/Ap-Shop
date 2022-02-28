@@ -9,6 +9,7 @@ const CardItem = (props) => {
 
   const moveToDetail = () => {
     history.push(`/Ap-Shop/product/${item.id}`);
+    console.log();
   };
 
   return (
